@@ -1,0 +1,11 @@
+<div *ngIf="message" class="alert-content">
+  <div class="alert-fix"  [ngClass]="{ 'alert': message, 
+                   'alert-success': message.type === 'success', 
+                   'alert-danger': message.type === 'error' }">
+    {{message.text}}
+  </div>
+  <div class="alert-login">
+    <label>Now, Login to Trading System     </label>
+    <a routerLink="/login">Log in </a>
+  </div>
+</div>

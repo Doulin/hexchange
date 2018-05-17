@@ -1,0 +1,151 @@
+<div class="container-fix">
+  <div class="banner-content">
+    <div class="introdution height-fix">
+      <div class="introdution-text banner-format">
+        <div class="text-content">
+          <div class="text-title">
+            <span class="text-span">CRYPTOCURRENCIES</span>
+            <span class="text-span">TRADING PLATFORM</span>
+          </div>
+          <div class="text-subtitle">
+            The most popular Website for trade Cryptocurrencies in the word with the following tools:
+          </div>
+          <div class="text-tool">
+            <ul>
+              <li>
+                <span>Buy or Sell Crytocurrency in one Click</span>
+              </li>
+              <li>
+                <span>Quick Deposits - Quick Withdrawals</span>
+              </li>
+              <li>
+                <span>Comfortable Trading</span>
+              </li>
+              <li>
+                <span>Reliable, High-liquidity Platform</span>
+              </li>
+              <li>
+                <span>Ensure Security</span>
+              </li>
+              <li>
+                <span>Get a panoramic view of the Crytocurrencies Market</span>
+              </li>
+              <li>
+                <span>Support Trader Everytime</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-direct">
+          <a class="btn btn-primary btn-lg button-view" routerLink="/register">Creat Your Account</a>
+        </div>
+      </div>
+      <div class="introdution-img banner-format ">
+        <img class="trade-image" src="/assets/introdution-image.png">
+      </div>
+    </div>
+    <div class="type-order height-fix">
+      <div class="banner-title banner-fix">
+        <span style="font-family: Montserrat,Rubik,sans-serif;font-weight: 600;margin-bottom: 20px">Three Type Order You Can Trade !</span>
+        <hr class="banner-hr">
+      </div>
+      <div class="type-order-function">
+        <div class="type-order-market banner-fix">
+          <div class="market-color function-fix">
+            <span>Market Order</span>
+          </div>
+          <div class="order-tool">
+            <ul>
+              <li>
+                <span>Information about Market Order</span>
+              </li>
+              <li>
+                <span>How to set price for this order ?</span>
+              </li>
+              <li>
+                <span>What can you do with this order type ?</span>
+              </li>
+              <li>
+                <span>Value when use this order type</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="type-order-limit banner-fix">
+          <div class="limit-color function-fix">
+            <span>Limit Order</span>
+          </div>
+          <div class="order-tool">
+            <ul>
+              <li>
+                <span>Information about Market Order</span>
+              </li>
+              <li>
+                <span>How to set price for this order ?</span>
+              </li>
+              <li>
+                <span>What can you do with this order type ?</span>
+              </li>
+              <li>
+                <span>Value when use this order type</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="type-order-stop banner-fix">
+          <div class="stop-color function-fix">
+            <span>Stop Order</span>
+          </div>
+          <div class="order-tool">
+            <ul>
+              <li>
+                <span>Information about Market Order</span>
+              </li>
+              <li>
+                <span>How to set price for this order ?</span>
+              </li>
+              <li>
+                <span>What can you do with this order type ?</span>
+              </li>
+              <li>
+                <span>Value when use this order type</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="type-coin height-fix">
+      <div class="banner-title banner-fix">
+        <span style="font-family: Montserrat,Rubik,sans-serif;font-weight: 600; margin-bottom: 20px">Cryptocurrencies Avaiable in HexChange</span>
+        <hr class="banner-hr">
+      </div>
+      <div class="type-coin-carousel">
+        <div class="carousel-container">
+          <ngx-carousel [inputs]="carouselCoinTile">
+            <ngx-tile NgxCarouselItem *ngFor="let coin of carouselCoinItems">
+              <div class="tile-image">
+                <div class="coin-image" [style.background-image]="'url('+ coin.image +')'"></div>
+                <div class="coin-logo" [style.background-image]="'url('+ coin.logo +')'">
+                </div>
+              </div>
+              <div class="coin-name">
+                <span>{{coin.name}}</span>
+              </div>
+              <div class="coin-map">
+                <span class="price-current">Price Current</span>
+                <span class="price-change">Price Change</span>
+                <div class="coin-graphic">
+                  <span style="padding: 10px 70px">COIN CHART</span>
+                </div>
+                </div>
+            </ngx-tile>
+            <button NgxCarouselPrev class='leftRs'>&lt;</button>
+            <button NgxCarouselNext class='rightRs'>&gt;</button>
+          </ngx-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

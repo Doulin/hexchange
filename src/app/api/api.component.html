@@ -1,0 +1,50 @@
+<div class="api-container">
+  <div class="api-body">
+    <div class="api-sidebar">
+      <div class="sidebar-content">
+        <label class="api-title">INTRODUTION</label>
+        <ul class="ul-fix">
+          <li class="api-target" > 
+            <a routerLink="/api/about" routerLinkActive="selected">About HexChange</a>
+          </li>
+          <li class="api-target">
+            <a routerLink="/api/guide" routerLinkActive="selected">Trade Guide</a>
+          </li>
+          <li class="api-target">
+            <a routerLink="/api/access" routerLinkActive="selected">API Access</a>
+          </li>
+          <li class="api-target">
+            <a routerLink="/api/fee" routerLinkActive="selected">Fees</a>
+          </li>
+        </ul>
+        <label class="api-title">API REFERENCE</label>
+        <ul class="ul-fix">
+          <li class="api-target">
+            <a routerLink="/api/general" routerLinkActive="selected">General</a>
+          </li>
+          <li class="api-target">
+            <a routerLink="/api/get" routerLinkActive="selected">GET Request</a>
+          </li>
+          <li class="api-target">
+            <a routerLink="/api/post" routerLinkActive="selected">POST Request</a>
+          </li>
+        </ul>
+        <label class="api-title">SECURITY</label>
+        <ul class="ul-fix">
+          <li class="api-target">
+            <a routerLink="/api/authen" routerLinkActive="selected">Authentication</a>
+          </li>
+          <li class="api-target">
+            <a routerLink="/api/backup" routerLinkActive="selected">Back-up Data</a>
+          </li>
+          <li class="api-target">
+            <a routerLink="/api/sercure" routerLinkActive="selected">Wallet Secure</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="api-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

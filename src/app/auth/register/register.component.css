@@ -1,0 +1,65 @@
+.register-container {
+    width: 100%;
+    height: 900px;    
+    background: #162126;
+    font-family: 'Quicksand', sans-serif;
+}
+.register-form {
+    width: 400px;
+    margin: 0 auto 0 auto;
+    padding-top: 60px;
+}
+.register-content {
+    width: 100%;
+    background: #f6d709;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 15px rgba(175, 173, 14, 0.973);
+}
+.register-content-fix{
+    padding: 5px 20px 5px 20px;
+    margin-bottom: 20px;
+}
+.register-title {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.pw {
+    border: none !important
+}
+.register-button {
+    margin-top: 50px;
+    margin-left: 210px;
+}
+
+/* CSS for validate */
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+  button {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}
+.alert {
+    padding: 0 !important
+}

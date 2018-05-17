@@ -1,0 +1,21 @@
+.alert-content {
+    width: 400px;
+    height: 250px;
+    margin: 0 auto 0 auto;
+    padding-top: 60px;
+    background: #f6d709;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 15px rgba(175, 173, 14, 0.973);
+}
+.alert-fix {
+    padding: 0 10px 10px 10px;
+}
+.alert-login {
+    padding: 0 10px 10px 10px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: black;
+}
