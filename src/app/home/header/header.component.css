@@ -3,8 +3,16 @@
     
 }
 .app-container {
+    max-width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0,0,0,0.06);
+    border-bottom: 1px solid #eee;
+}
+.header-container {
     max-width: 1250px;
-    
+    padding-left: 72px;
 }   
 .navbar>.container-fluid {
     justify-content: initial;

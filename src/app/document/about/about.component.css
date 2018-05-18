@@ -1,0 +1,74 @@
+.introduce {
+    font-family: 'Nunito', sans-serif !important;
+}
+.introduce-title {
+    padding-right: 140px;
+    border-bottom: 1px solid #eee;
+}
+.introduce-body {
+    padding: 20px 10px 0 0;
+}
+.body-details {
+    border-left: 5px solid #42A948;
+    display: flex;
+    background-color: #e8fde8;
+}
+.body-icon {
+    flex-basis: 10%;
+}
+.body-content {
+    flex-basis: 90%;
+}
+.body-icon {
+    position: relative;
+}
+
+.become-trader {
+    border-left: 5px solid #ff5722;
+    display: flex;
+    background-color: #e8fde8;
+}
+.become-title {
+    padding: 30px 0 10px 0;
+}
+.become-content {
+    color: #ff5722 !important;
+    margin-bottom: 0px !important;
+}
+a {
+    color: #ff5722 !important;
+    text-decoration: none; 
+}
+.a-fix {
+    margin: 8px 0 8px 0 !important;
+}
+a:hover {
+    font-weight: bold;
+}
+.title-1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.body-benefit {
+    color: #099611 !important;
+    margin-bottom: 0px !important;
+}
+p {
+    margin: 8px 0 8px 0 !important;
+}
+.fa, .fas {
+    font-size: 44px;
+    color: #42A948;
+    position: absolute;
+    top: calc(50% - 23px) !important;
+    left: calc(50% - 19px) !important;
+}
+ .far {
+    font-size: 44px;
+    color: #ff5722;
+    position: absolute;
+    top: calc(50% - 23px) !important;
+    left: calc(50% - 19px) !important;
+}

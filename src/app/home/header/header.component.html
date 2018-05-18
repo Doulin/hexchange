@@ -1,32 +1,34 @@
 <div class="container app-container">
-  <div class="header">
-    <nav class="navbar navbar-fix header-content">
-      <div class="container-fluid">
-        <div class="navbar-header header-view">
-          <div class="text-name navbar-brand" >HEXCHANGE</div>
+  <div class="header-container">
+    <div class="header">
+      <nav class="navbar navbar-fix header-content">
+        <div class="container-fluid">
+          <div class="navbar-header header-view">
+            <div class="text-name navbar-brand">HEXCHANGE</div>
+          </div>
+          <div class="header-menu">
+            <ul class="nav nav-pills header-navbar header-view ">
+              <li>
+                <a class="text-bold" routerLink="/home" routerLinkActive="selected">Trang Chủ</a>
+              </li>
+              <li>
+                <a class="text-bold " routerLink="/trade" routerLinkActive="selected">Thị Trường</a>
+              </li>
+              <li>
+                <a class="text-bold " routerLink="/doc" routerLinkActive="selected">Tài Liệu</a>
+              </li>
+              <li>
+                <a class="text-bold " routerLink="/support" routerLinkActive="selected">Hỗ Trợ</a>
+              </li>
+            </ul>
+            <div class="header-phone">(+84)966 999 999</div>
+            <form class="form-inline my-2 my-lg-0 header-form">
+              <a class="btn btn-outline-success button-view" routerLink="/login">Đăng Nhập</a>
+              <a class="btn btn-outline-danger button-view" routerLink="/register">Tạo Tài Khoản</a>
+            </form>
+          </div>
         </div>
-        <div class="header-menu">
-          <ul class="nav nav-pills header-navbar header-view ">
-            <li>
-              <a  class="text-bold" routerLink="/home" routerLinkActive="selected">Trang Chủ</a>
-            </li>
-            <li>
-              <a  class="text-bold " routerLink="/trade" routerLinkActive="selected">Thị Trường</a>
-            </li>
-            <li>
-              <a class="text-bold " routerLink="/doc" routerLinkActive="selected">Tài Liệu</a>
-            </li>
-            <li>
-              <a class="text-bold " routerLink="/support" routerLinkActive="selected">Hỗ Trợ</a>
-            </li>
-          </ul>
-          <div class="header-phone">(+84)966 999 999</div>
-          <form class="form-inline my-2 my-lg-0 header-form">
-            <a class="btn btn-outline-success button-view" routerLink="/login">Đăng Nhập</a>
-            <a class="btn btn-outline-danger button-view" routerLink="/register">Tạo Tài Khoản</a>
-          </form>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
 </div>

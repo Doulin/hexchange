@@ -1,27 +1,30 @@
-.api-container {
+.doc-container {
     border-top: 1px solid #eee;
-    box-shadow: 0 0 20px rgba(0,0,0,0.06) inset;
+    padding-top: 78px;
 }
-.api-body {
+.doc-body {
     display: flex;
-
+    position: relative;
 }
-.api-sidebar {
+.doc-sidebar {
     flex-basis: 20%;
     border-right: 1px solid #eee;
     padding: 40px 10px 10px 20px;
+    position: fixed;
 }
-.api-content {
+.doc-content {
+    position: absolute;
+    left: 269px;
     flex-basis: 80%;
-    padding: 40px 10px 20px 20px;
+    padding: 40px 10px 20px 30px;
 }
-.api-title {
+.doc-title {
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: #413d3dd6;
 }
-.api-target {
+.doc-target {
     list-style: none;
     margin-bottom: 10px;
 }

@@ -1,3 +1,74 @@
-<p>
-  support works!
-</p>
+<div class="support-container">
+  <div class="support-title">
+    <div class="support-welcome">
+      <span>CONTACT US</span>
+      <hr class="support-hr">
+    </div>
+    <p>Trong trường hợp gặp những khó khăn trong giao dịch, đặt lệnh mua bán hay gặp phải vấn đề khi sử dụng
+      hệ thống và những đóng góp ý kiến cho hệ thống, xin vui lòng sử dụng các cách thức liên lạc dưới
+      đây.
+    </p>
+  </div>
+  <div class="support-body">
+    <div class="support-type1">
+      <div class="type-title">
+        <span>HÒM THƯ HỆ THỐNG</span>
+      </div>
+      <div class="type1-content">
+        <ul>
+          <li>
+            <p>Phone: </p>
+            <div class="icon-fix">
+              <i class="fas fa-phone"></i>
+              <p class="p-fix">(+84)969 969 696</p>
+            </div>
+          </li>
+          <li>
+            <p>Email: </p>
+            <div class="icon-fix google">
+              <i class="fab fa-google-plus-g"></i>
+              <p class="p-fix">hexchange@gmail.com</p>
+            </div>
+          </li>
+          <li>
+            <p>Facebook: </p>
+            <div class="icon-fix facebook">
+              <i class="fab fa-facebook"></i>
+              <p class="p-fix">Hexchange Home Page</p>
+            </div>
+          </li>
+          <li>
+            <p>Twitter: </p>
+            <div class="icon-fix twitter">
+              <i class="fab fa-twitter"></i>
+              <p class="p-fix">Hexchange Home Page</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="support-type2">
+      <div class="type-title">
+        <span>LIÊN HỆ TRỰC TIẾP VỚI ĐỘI NGŨ PHÁT TRIỂN</span>
+      </div>
+      <div class="type2-content">
+        <ul class="ul-fix" *ngFor="let staff of staffHexChange">
+          <li>
+            <div class="img-fix">
+              <img [src]="staff.image" style="height: 120px; width: 120px; border-radius: 50%;">
+            </div>
+          </li>
+          <li>
+            {{staff.name}}
+          </li>
+          <li>
+            {{staff.position}}
+          </li>
+          <li>
+            Email: {{staff.email}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

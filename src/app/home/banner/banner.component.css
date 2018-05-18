@@ -4,11 +4,12 @@
 }
 
 .introdution{
-    height: 600px;
+    height: 700px;
     margin-bottom: 30px;
     z-index: -1;
     background: #162126;
     display: flex;
+    padding-top: 78px;
 }
 .type-order {
     height: 600px;
