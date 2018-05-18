@@ -16,18 +16,18 @@ import {FooterComponent} from '../home/footer/footer.component';
 import {LoginComponent} from '../auth/login/login.component';
 import {RegisterComponent} from '../auth/register/register.component';
 import {AlertMessageComponent} from '../auth/alert-message/alert-message.component';
-import { ApiComponent } from '../api/api.component';
+import { DocComponent } from '../document/doc.component';
 import { SupportComponent } from '../support/support.component';
-import { AboutComponent } from '../api/about/about.component';
-import { GuideComponent } from '../api/guide/guide.component';
-import { ApiAccessComponent } from '../api/api-access/api-access.component';
-import { FeeComponent } from '../api/fee/fee.component';
-import { GeneralComponent } from '../api/general/general.component';
-import { GetComponent } from '../api/get/get.component';
-import { PostComponent } from '../api/post/post.component';
-import { AuthenComponent } from '../api/authen/authen.component';
-import { BackupComponent } from '../api/backup/backup.component';
-import { SercureComponent } from '../api/sercure/sercure.component';
+import { AboutComponent } from '../document/about/about.component';
+import { GuideComponent } from '../document/guide/guide.component';
+import { ApiAccessComponent } from '../document/api-access/api-access.component';
+import { FeeComponent } from '../document/fee/fee.component';
+import { GeneralComponent } from '../document/general/general.component';
+import { GetComponent } from '../document/get/get.component';
+import { PostComponent } from '../document/post/post.component';
+import { AuthenComponent } from '../document/authen/authen.component';
+import { BackupComponent } from '../document/backup/backup.component';
+import { SercureComponent } from '../document/sercure/sercure.component';
 
 @NgModule({
   imports: [
@@ -46,7 +46,7 @@ import { SercureComponent } from '../api/sercure/sercure.component';
     LoginComponent,
     RegisterComponent,
     AlertMessageComponent,
-    ApiComponent,
+    DocComponent,
     SupportComponent,
     AboutComponent,
     GuideComponent,
