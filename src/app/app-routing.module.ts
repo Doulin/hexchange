@@ -2,12 +2,12 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BannerComponent } from './home/banner/banner.component';
-import { TradeComponent } from './trade/trade.component';
+import { UserComponent } from './user/user.component';
 
 const appRoutes: Routes = [
     {
-        path: 'trade',
-        component: TradeComponent
+        path: 'user',
+        loadChildren: 'app/user/user.module#UserModule'
     },
     {
         path: 'home',
