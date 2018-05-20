@@ -3,95 +3,101 @@
     <div class="register-content">
       <div *ngIf="!message" class="register-content-fix">
         <div class="register-title">
-          <label>Create an Account to enjoy HexChange</label>
+          <label>Tạo Tài Khoản Để Trở Thành Trader !</label>
         </div>
         <div class="register-directly">
-          <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && register()" #formDir="ngForm">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
             <div class="form-group">
-              <label for="name">Nick Name: </label>
+              <label for="name">Họ và Tên: </label>
               <input id="name" class="form-control" formControlName="name" required>
               <div *ngIf="registerForm.get('name').invalid && (registerForm.get('name').dirty ||registerForm.get('name').touched)" class="alert alert-danger">
                 <div *ngIf="registerForm.get('name').errors.required">
-                  You must have Nick Name!
+                  Bạn Cần Có Họ Tên ! 
                 </div>
                 <div *ngIf="registerForm.get('name').errors.minlength">
-                  Name must be at least 4 characters long.
+                  Họ Tên cần ít nhất 4 ký tự !
                 </div>
                 <div *ngIf="registerForm.hasError('invalidValue', 'name')">
-                  Invalid Name !
+                  Họ Tên Không Hợp Lệ !
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="email">Your Email</label>
+              <label for="email">Địa Chỉ Email:</label>
               <input id="email" class="form-control" formControlName="email" required>
               <div *ngIf="registerForm.get('email').invalid && (registerForm.get('email').dirty || registerForm.get('email').touched)"
                 class="alert alert-danger">
                 <div *ngIf="registerForm.get('email').errors.required">
-                  Email is required !
+                  Bạn Cần Cung Cấp Địa Chỉ Email !
                 </div>
                 <div *ngIf="registerForm.get('email').errors.minlength">
-                  Email must be at least 12 characters long.
+                  Email cần ít nhất 12 kỹ tự !
                 </div>
                 <div *ngIf="registerForm.get('email').errors.email">
-                  Invalid Email !
+                  Email không hợp lệ !
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="phone_number">Phone Number</label>
+              <label for="phone_number">Số Điện Thoại:</label>
               <input id="password" class="form-control" formControlName="phone_number" required>
               <div *ngIf="registerForm.get('phone_number').invalid && (registerForm.get('phone_number').dirty || registerForm.get('phone_number').touched)"
                 class="alert alert-danger">
                 <div *ngIf="registerForm.get('phone_number').errors.required">
-                  Phone Number is required !
+                  Bạn Cần Có Số Điện Thoại !
                 </div>
                 <div *ngIf="registerForm.hasError('invalidPhone', 'phone_number')">
-                  Please put invalid Phone Number !
+                  Hãy Nhập Số Điện Thoại Hợp Lệ !
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="registerForm.get('country_code')">Country Code</label>
+              <label for="registerForm.get('country_code')">Mã Vùng:</label>
               <input id="password" class="form-control" formControlName="country_code" required>
               <div *ngIf="registerForm.get('country_code').invalid && (registerForm.get('country_code').dirty || registerForm.get('country_code').touched)"
                 class="alert alert-danger">
                 <div *ngIf="registerForm.get('country_code').errors.required">
-                  Country Code is required !
+                  Yêu cầu có mã Vùng !
                 </div>
                 <div *ngIf="registerForm.hasError('invalidCode', 'country_code')">
-                  Please put invalid Country Code !
+                  Hãy Nhập Mã Vùng Hợp Lệ !
                 </div>
               </div>
             </div>
             <div class="pw" formGroupName="pw">
               <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password">Mật Khẩu: </label>
                 <input id="password" class="form-control" formControlName="password" required>
                 <div *ngIf="registerForm.get('pw.password').invalid && (registerForm.get('pw.password').dirty || registerForm.get('pw.password').touched)"
                   class="alert alert-danger">
                   <div *ngIf="registerForm.get('pw.password').errors.required">
-                    Password is required !
+                    Xin Hãy Nhập Mật Khẩu !
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label for="confirm_password">Confirm Password</label>
+                <label for="confirm_password">Xác Nhận Mật Khẩu:</label>
                 <input id="confirm_password" class="form-control" formControlName="confirm_password" required>
                 <div *ngIf="registerForm.get('pw.confirm_password').invalid && (registerForm.get('pw.confirm_password').dirty || registerForm.get('pw.confirm_password').touched)"
                   class="alert alert-danger">
                   <div *ngIf="registerForm.get('pw.confirm_password').errors.required">
-                    Confirm password is required !
+                    Hãy Xác Nhận Mật Khẩu !
                   </div>
                 </div>
               </div>
               <div class="alert alert-danger" *ngIf="registerForm.hasError('passnotmatch', ['pw']) ">
-                Password does not match!
+                Mật Khẩu Không Trùng Khớp !
               </div>
+              <div class="alert alert-danger" *ngIf="errEmail">
+                Email này đã được sử dụng !
+              </div>
+              <div class="alert alert-danger" *ngIf="errPassword">
+                  Mật khẩu cần ít nhất 8 ký tự, bao gồm số, chữ hoa, chữ thường và ký tự đặc biệt !
+                </div>
             </div>
             <div class="register-button">
-              <button [disabled]="!registerForm.valid" type="submit" class="btn btn-default">Submit</button>
-              <button type="button" class="btn btn-default">Cancel</button>
+              <button [disabled]="!registerForm.valid" type="submit" class="btn btn-default">Đăng Ký</button>
+              <button type="button" class="btn btn-default">Hủy</button>
             </div>
           </form>
         </div>

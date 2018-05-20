@@ -35,6 +35,8 @@ export class RegisterComponent implements OnInit {
   private subscription: Subscription;
   registerForm: FormGroup;
   message: any;
+  errEmail = false;
+  errPassword = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -64,10 +66,14 @@ export class RegisterComponent implements OnInit {
         },
         error => {
           const errRespone = Object.keys(error.error).map(key => (error.error)[key]);
-          const errMail = Object.keys(errRespone[1]).map(key => ((errRespone[1])[key]));
+          const errMessage = Object.keys(errRespone[1]).map(key => ((errRespone[1])[key]));
           const string1 = 'The email has already been taken.';
-          if (errMail[0] === string1) {
-            console.log('Get it');
+          const string2 = 'The password format is invalid.';
+          if (errMessage[0] === string1) {
+            this.errEmail = true;
+          }
+          if (errMessage[0] === string2) {
+            this.errPassword = true;
           }
         }
       );
@@ -85,6 +91,14 @@ export class RegisterComponent implements OnInit {
           validator: comparePass
         })
     });
+  }
+
+  onSubmit() {
+    if (this.registerForm.valid) {
+      this.register();
+    } else {
+      this.registerForm.reset();
+    }
   }
 
 }

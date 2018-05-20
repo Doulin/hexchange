@@ -16,10 +16,6 @@ export class AuthService {
   ) { }
 
   createUser(user: any) {
-    // const header = new HttpHeaders();
-    // header.append('Access-Control-Allow-Headers', 'Content-Type');
-    // header.append('Content-Type', 'application/json');
-    // header.append('Access-Control-Allow-Origin', 'http://localhost:4200');
     const respone = this.http.post('http://login-demo.local.com/api/users/create', user)
       .map((res: Response) => res.json);
     return respone;

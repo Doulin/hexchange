@@ -1,0 +1,15 @@
+.order-book-container {
+    display: flex;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+.order-book-fix{
+    flex: 1;
+    padding: 15px 5px 10px 5px;
+}
+
+.order-book-title{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}

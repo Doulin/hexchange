@@ -1,13 +1,14 @@
 .register-container {
+    padding-top: 78px;
     width: 100%;
     height: 900px;    
     background: #162126;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 .register-form {
     width: 400px;
     margin: 0 auto 0 auto;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 .register-content {
     width: 100%;
@@ -23,16 +24,16 @@
 }
 .register-title {
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
+    ont-family: 'Nunito', sans-serif;
     font-size: 28px;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .pw {
     border: none !important
 }
 .register-button {
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 210px;
 }
 

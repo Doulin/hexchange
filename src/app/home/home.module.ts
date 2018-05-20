@@ -3,6 +3,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {NgxCarouselModule} from 'ngx-carousel';
+import { RecaptchaModule} from 'ng-recaptcha';
 
 import {AuthService} from '../core/services/auth.service';
 import {AlertService} from '../core/services/alert.services';
@@ -36,7 +37,8 @@ import { SercureComponent } from '../document/sercure/sercure.component';
     NgxCarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule.forRoot()
   ],
   declarations: [
     HomeComponent,

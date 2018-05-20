@@ -1,0 +1,67 @@
+<div class="order-form-container">
+  <form [formGroup]="orderForm" #formDir="ngForm" class="order-form-submit" (ngSubmit)="orderForm.valid && createOrder()">
+    <ul class="order-form-type">
+      <li class="order-form-type-content market-css">MARKET</li>
+      <li class="order-form-type-content">LIMIT</li>
+      <li class="order-form-type-content">STOP</li>
+    </ul>
+    <div class="form-group order-form-side">
+      <label class="side-content is-buy-side">
+        <input class="radio" type="radio" value="1" formControlName="order_side">BUY</label>
+      <label class="side-content is-sell-side">
+        <input class="radio" type="radio" value="0" formControlName="order_side">SELL</label>
+    </div>
+    <div class="form-group">
+      <label for="size">Số Lượng Coin: </label>
+      <input type="number" formControlName="order_size" class="form-control" placeholder="0.0000">
+    </div>
+    <div class="form-group">
+      <label for="size">Đặt Giá (Giá 1 coin): </label>
+      <input type="number" formControlName="order_price" class="form-control" placeholder="0.0000">
+    </div>
+    <div class="form-group type-coin">
+      <p>Type Coin:</p>
+      <label class="type-coin-content">
+        <input class="radio" type="radio" value="3" formControlName="currency">BTC</label>
+      <label class="type-coin-content">
+        <input class="radio" type="radio" value="2" formControlName="currency">ETH</label>
+    </div>
+    <div class="order-form-details">
+      <div class="order-form-details-content order-size">
+        <div class="order-form-details-title">
+          <b>Số Lượng</b>
+          <span>()</span>
+          <b>=</b>
+        </div>
+      </div>
+      <div class="order-form-details-content order-price">
+        <div class="order-form-details-title">
+          <b>Giá 1 Coin</b>
+          <span>()</span>
+          <b>=</b>
+        </div>
+      </div>
+      <div class="order-form-details-content order-fee">
+        <div class="order-form-details-title">
+          <b>Chi Phí Giao Dịch</b>
+          <span>()</span>
+          <b>=</b>
+        </div>
+      </div>
+      <div class="order-form-details-content order-total">
+        <div class="order-form-details-title">
+          <b>Tổng Thanh Toán</b>
+          <span>()</span>
+          <b>=</b>
+        </div>
+      </div>
+    </div>
+    <button [disabled]="!orderForm.valid" type="submit" class="btn btn-default create-order">TẠO ĐƠN GIAO DỊCH</button>
+    <div *ngIf="!orderForm.valid" class="alert alert-danger">
+      <p> Để đặt đơn bạn cần:</p>
+      <p> - Chọn loại đơn (mua hoặc bán, số lượng coin và giá phải là số dương) </p>
+      <p>- Nếu bên mua: tổng tiền phải nhỏ hơn số tiền trong ví bạn</p>
+      <p>- Nếu bên bán: số coin phải nhỏ hơn số coin trong ví bạn </p>
+    </div>
+  </form>
+</div>
