@@ -8,6 +8,7 @@ import { RecaptchaModule} from 'ng-recaptcha';
 import {AuthService} from '../core/services/auth.service';
 import {AlertService} from '../core/services/alert.services';
 import {HomeRoutesModule} from '../home/home-routes.module';
+import { UserService } from '../core/services/user.service';
 
 import {HomeComponent} from '../home/home.component';
 import {HeaderComponent} from '../home/header/header.component';
@@ -30,6 +31,8 @@ import { AuthenComponent } from '../document/authen/authen.component';
 import { BackupComponent } from '../document/backup/backup.component';
 import { SercureComponent } from '../document/sercure/sercure.component';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -41,29 +44,14 @@ import { SercureComponent } from '../document/sercure/sercure.component';
     RecaptchaModule.forRoot()
   ],
   declarations: [
-    HomeComponent,
-    HeaderComponent,
-    BannerComponent,
-    FooterComponent,
-    LoginComponent,
-    RegisterComponent,
-    AlertMessageComponent,
-    DocComponent,
-    SupportComponent,
-    AboutComponent,
-    GuideComponent,
-    ApiAccessComponent,
-    FeeComponent,
-    GeneralComponent,
-    GetComponent,
-    PostComponent,
-    AuthenComponent,
-    BackupComponent,
-    SercureComponent
+    HomeComponent, HeaderComponent, BannerComponent, FooterComponent, LoginComponent, RegisterComponent,
+    AlertMessageComponent, DocComponent, SupportComponent, AboutComponent, GuideComponent, ApiAccessComponent,
+    FeeComponent, GeneralComponent, GetComponent, PostComponent, AuthenComponent, BackupComponent, SercureComponent
   ],
   providers: [
     AuthService,
-    AlertService
+    AlertService,
+    UserService
   ]
 })
 export class HomeModule { }

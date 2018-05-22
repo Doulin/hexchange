@@ -1,5 +1,6 @@
 import { NgModule, Component } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
+
 
 import { BannerComponent } from './home/banner/banner.component';
 import { UserComponent } from './user/user.component';

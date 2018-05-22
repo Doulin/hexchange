@@ -1,0 +1,35 @@
+:host {
+    width: 100%;
+}
+.inforPerson-container {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+.inforPerson-content {
+    width: 1000px;
+    color: #413d3db5;
+}
+.inforPerson-title {
+    text-align: center;
+    font-size: 32px;
+}
+.inforPerson-button {
+    padding-left: 530px;
+}
+.form-group, .form-content {
+    display: flex;
+}
+.title-form {
+    flex-basis: 16%;
+    padding-top: 8px;
+}
+.body-form {
+    flex-basis: 54%;
+}
+.space-form {
+    flex-basis: 30%;
+}
+.body-default {
+    padding-top: 10px;
+    color: black;
+}

@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators, AbstractControl, FormBuilder } from
 import { HttpResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs/Subscription';
 
-import { AuthService } from '../../core/services/auth.service';
+import { UserService } from '../../core/services/user.service';
 import { AlertService } from '../../core/services/alert.services';
 import { Users } from '../../core/models/user';
 
@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService,
+    private userService: UserService,
     private alertService: AlertService
   ) {
     this.subscription = alertService.getMessage().subscribe(message => { this.message = message; });
@@ -59,12 +59,13 @@ export class RegisterComponent implements OnInit {
       password: this.registerForm.value.pw.password
     };
     console.log(user);
-    this.authService.createUser(user)
+    this.userService.createUser(user)
       .subscribe(
         data => {
           this.alertService.success('Registration successful', true);
         },
         error => {
+          console.log(error.error.data);
           const errRespone = Object.keys(error.error).map(key => (error.error)[key]);
           const errMessage = Object.keys(errRespone[1]).map(key => ((errRespone[1])[key]));
           const string1 = 'The email has already been taken.';

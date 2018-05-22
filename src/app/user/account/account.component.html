@@ -1,3 +1,31 @@
-<p>
-  account works!
-</p>
+<div class="account-container">
+  <div class="account-body">
+    <div class="account-sidebar">
+      <div class="sidebar-content">
+        <ul class="ul-fix">
+          <li class="account-target" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/user/account/infor-person" routerLinkActive="a-selected">
+              <i class="far fa-address-card icon-fix"></i>
+              Thông Tin Cá Nhân
+            </a>
+          </li>
+          <li class="account-target" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/user/account/infor-wallet" routerLinkActive="a-selected">
+              <i class="fas fa-wallet icon-fix"></i>
+                         Quản Lý Ví
+            </a>
+          </li>
+          <li class="account-target" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/user/account/infor-sercure" routerLinkActive="a-selected">
+              <i class="fas fa-lock icon-fix"></i>
+                         Cài đặt bảo mật
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="account-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

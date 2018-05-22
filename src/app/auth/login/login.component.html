@@ -7,14 +7,14 @@
         </div>
         <div class="login-third-party">
           <div class="login-third-party-content facebook">
-            Facebook 
+            Facebook
           </div>
           <div class="login-third-party-content google">
-            Google 
+            Google
           </div>
         </div>
         <div class="login-directly">
-          <form [formGroup]="loginForm" #formDir="ngForm">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
             <div class="form-group">
               <label for="email">Địa Chỉ Email:</label>
               <input id="email" class="form-control" formControlName="email" required>
@@ -33,18 +33,19 @@
             <div class="form-group">
               <label for="password">Mật Khẩu: </label>
               <input id="password" class="form-control" formControlName="password" required>
-              <div *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)" class="alert alert-danger">
+              <div *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)"
+                class="alert alert-danger">
                 <div *ngIf="loginForm.get('password').errors.required">
                   Password is required !
                 </div>
               </div>
             </div>
             <div class="login-captcha">
-                <re-captcha #captchaRef="reCaptcha" (resolved)="resolved($event)" siteKey="6LfnMFoUAAAAAJM66aKC8s31NhzTZD-fK3Jt5zWt"></re-captcha>
+              <re-captcha #captchaRef="reCaptcha" (resolved)="resolved($event)" siteKey="6LfnMFoUAAAAAJM66aKC8s31NhzTZD-fK3Jt5zWt"></re-captcha>
             </div>
             <div class="login-button">
-              <button type="submit" class="btn btn-default" >Đăng Nhập</button>
-              <button type="button" class="btn btn-default" >Hủy</button>
+              <button [disabled]="!loginForm.valid" type="submit" class="btn btn-default">Đăng Nhập</button>
+              <button type="button" class="btn btn-default">Hủy</button>
             </div>
           </form>
           <div class="login-footer">

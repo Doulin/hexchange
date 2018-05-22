@@ -11,21 +11,21 @@
             <div class="header-menu">
               <ul class="nav nav-pills header-navbar header-view ">
                 <li>
-                  <a class="text-bold" routerLink="/trade" routerLinkActive="selected">Giao Dịch</a>
+                  <a class="text-bold" routerLink="/user/trade" routerLinkActive="selected">Giao Dịch</a>
                 </li>
                 <li>
-                  <a class="text-bold " routerLink="/deposit" routerLinkActive="selected">Nạp Tài Khoản</a>
+                  <a class="text-bold " routerLink="/user/deposit" routerLinkActive="selected">Nạp Tài Khoản</a>
                 </li>
                 <li>
-                  <a class="text-bold " routerLink="/withdraw" routerLinkActive="selected">Rút Tiền</a>
+                  <a class="text-bold " routerLink="/user/withdraw" routerLinkActive="selected">Rút Tiền</a>
                 </li>
                 <li>
-                  <a class="text-bold " routerLink="/account" routerLinkActive="selected">Quản Lý Tài Khoản</a>
+                  <a class="text-bold " routerLink="/user/account" routerLinkActive="selected">Quản Lý Tài Khoản</a>
                 </li>
               </ul>
               <div class="header-phone"></div>
               <form class="form-inline my-2 my-lg-0 header-form">
-                <a class="btn btn-outline-success button-view" routerLink="/home">Đăng Xuất</a>
+                <a class="btn btn-outline-success button-view" (click)="logOut()">Đăng Xuất</a>
               </form>
             </div>
           </div>

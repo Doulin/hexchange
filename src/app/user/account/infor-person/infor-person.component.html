@@ -1,0 +1,89 @@
+<div class="inforPerson-container">
+  <div class="inforPerson-content">
+    <div class="inforPerson-title">
+      <p>TÀI KHOẢN</p>
+    </div>
+    <div class="inforPerson-body">
+      <form [formGroup]="inforPersonForm " (ngSubmit)="onSubmit()" #formDir="ngForm">
+        <div class="form-group">
+          <p class="title-form"> Họ và Tên:</p>
+          <div class="body-form">
+            <input id="name" class="form-control" [ngModel]="currentUser.name" formControlName="name" required>
+            <div *ngIf="inforPersonForm.get('name').invalid && (inforPersonForm.get('name').dirty ||inforPersonForm.get('name').touched)"
+              class="alert alert-danger">
+              <div *ngIf="inforPersonForm.get('name').errors.required || inforPersonForm.get('name').errors.minlength">
+                Tên Thay Thế Chưa Hợp Lệ !
+              </div>
+            </div>
+          </div>
+          <div class="space-form"></div>
+        </div>
+        <div class="form-group">
+          <p class="title-form">Địa Chỉ Email:</p>
+          <div class="body-form">
+            <input id="email" class="form-control" [ngModel]="currentUser.email" formControlName="email" required>
+            <div *ngIf="inforPersonForm.get('email').invalid && (inforPersonForm.get('email').dirty ||inforPersonForm.get('email').touched)"
+              class="alert alert-danger">
+              <div *ngIf="inforPersonForm.get('email').errors.required || inforPersonForm.get('email').errors.minlength || inforPersonForm.get('email').errors.email">
+                Email Thay Thế Không Hợp Lệ !
+              </div>
+            </div>
+          </div>
+          <div class="space-form"></div>
+        </div>
+        <div class="form-group">
+          <p class="title-form">Số Điện Thoại:</p>
+          <div class="body-form">
+            <input id="phone_number" class="form-control" [ngModel]="currentUser.phone_number" formControlName="phone_number" required>
+            <div *ngIf="inforPersonForm.get('phone_number').invalid && (inforPersonForm.get('phone_number').dirty ||inforPersonForm.get('phone_number').touched)"
+              class="alert alert-danger">
+              <div *ngIf="inforPersonForm.get('phone_number').errors.required">
+                Hãy Nhập Số Điện Thoại Chính Xác !
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-form"></div>
+        <div class="form-group">
+          <p class="title-form">Mã Quốc Gia:</p>
+          <div class="body-form">
+            <input id="country_code" class="form-control" [(ngModel)]="currentUser.country_code" formControlName="country_code" required>
+            <div *ngIf="inforPersonForm.get('country_code').invalid && (inforPersonForm.get('country_code').dirty ||inforPersonForm.get('country_code').touched)"
+              class="alert alert-danger">
+              <div *ngIf="inforPersonForm.get('country_code').errors.required">
+                Nhập Đúng Mã Quốc Gia Của Bạn !
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-form"></div>
+        <div class="form-content">
+          <p class="title-form">Thời Gian Tạo: </p>
+          <div class="body-form body-default">
+            <span>{{currentUser.created_at}}</span>
+          </div>
+          <div class="space-form"></div>
+        </div>
+        <div class="form-content ">
+          <p class="title-form">Trạng Thái: </p>
+          <div class="body-form body-default">
+            <span *ngIf="currentUser.activated === 1"> Tài Khoản Đã Được Kích Hoạt</span>
+            <span *ngIf="currentUser.activated === 0"> Tài Khoản Chưa Được Kích Hoạt</span>
+          </div>
+          <div class="space-form"></div>
+        </div>
+        <div class="form-content">
+          <p class="title-form">Tỷ Lệ Đánh Giá: </p>
+          <div class="body-form body-default">
+            <span>{{currentUser.rating}}</span>
+          </div>
+          <div class="space-form"></div>
+        </div>
+        <div class="inforPerson-button">
+          <button [disabled]="!inforPersonForm.valid" type="submit" class="btn btn-default">Update</button>
+          <button type="button" class="btn btn-default" (click)="goBack()"> Go Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
