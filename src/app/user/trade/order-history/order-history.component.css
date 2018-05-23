@@ -1,0 +1,55 @@
+:host, .history-container, .history-content, .history-title,.history-body {
+    width: 710px;
+}
+.history-content {
+    font-family: 'Nunito', sans-serif;
+}
+.history-title {
+    padding-top: 15px;
+    display: flex;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+.order-history {
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    color: aliceblue;
+}
+.btc {
+    font-weight: bold;
+    color: #ff8300;
+}
+.eth {
+    font-weight: bold;
+    color: #00c2ff;
+}
+.buy, .full {
+    color: #42A948;
+}
+.sell, .partial {
+    color: #ff5722;
+}
+.pending {
+    color: red;
+}
+.cancel {
+    color: gray;
+}
+.init, .full, .partial, .pending, .cancel {
+    font-weight: bold;
+}
+.coin, .space  {
+    flex-basis: 10%;
+}
+.size, .price, .state, .buy-sell {
+    flex-basis: 15%;
+}
+.created_at {
+    flex-basis: 20%;
+}
+ul {
+    padding-left: 0px !important;
+}
+

@@ -23,8 +23,8 @@
             </ul>
             <div class="header-phone">(+84)966 999 999</div>
             <form class="form-inline my-2 my-lg-0 header-form">
-              <a class="btn btn-outline-success button-view" routerLink="/login">Đăng Nhập</a>
-              <a class="btn btn-outline-danger button-view" routerLink="/register">Tạo Tài Khoản</a>
+              <a *ngIf="isLoggedIn === false" class="btn btn-outline-success button-view" routerLink="/login">Đăng Nhập</a>
+              <a *ngIf="isLoggedIn === false" class="btn btn-outline-danger button-view" routerLink="/register">Tạo Tài Khoản</a>
             </form>
           </div>
         </div>

@@ -9,7 +9,6 @@ import { Users } from '../models/user';
 
 @Injectable()
 export class UserService {
-  isLoggedIn = false;
   constructor(
     private _http: HttpClient
   ) { }

@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="text-direct">
-          <a class="btn btn-primary btn-lg button-view" routerLink="/register">Tạo Tài Khoản</a>
+          <a *ngIf="isLoggedIn === false" class="btn btn-primary btn-lg button-view" routerLink="/register">Tạo Tài Khoản</a>
         </div>
       </div>
       <div class="introdution-img banner-format ">

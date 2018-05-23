@@ -5,34 +5,53 @@
         <span class="text-fix">Tham Gia Vào HexChange</span>
       </div>
       <div class="text-content">
-        <span class="text-fix">Tạo 1 Tài Khoản Cho Riêng Bạn Để Trở Thành Một Trader Trong Hệ Thống.
-          Sau Khi Đăng Nhập, Bạn Sẽ Thấy Được Toàn Cảnh Diễn Biến Của Thị Trường.
+        <span class="text-fix">Tạo 1 Tài Khoản Cho Riêng Bạn Để Trở Thành Một Trader Trong Hệ Thống. Sau Khi Đăng Nhập, Bạn Sẽ Thấy
+          Được Toàn Cảnh Diễn Biến Của Thị Trường.
         </span>
       </div>
     </div>
     <div class="get-start-direct">
-      <a class="btn btn-primary btn-lg" routerLink="/register">Tạo Tài Khoản</a>
+      <a *ngIf="isLoggedIn === false" class="btn btn-primary btn-lg" routerLink="/register">Tạo Tài Khoản</a>
     </div>
   </div>
   <div class="footer-social footer-fix">
-      <div class="inner-footer">
-          <div class="text-title">
-              <span class="text-fix">Contact Us</span>
-            </div>
-          <ul class="social-content">
-              <li class="facebook">
-                  <a href="#" target="_blank"><span class="icon"><i class="fa fa-facebook"></i></span>
-                      <span>Facebook</span></a>
-              </li>
-              <li class="twitter">
-                  <a href="" target="_blank"><span class="icon"><i class="fa fa-twitter"></i></span>
-                      <span>Twitter</span></a>
-              </li>
-              <li class="google-plus">
-                  <a href="#" target="_blank"><span class="icon"><i class="fa fa-google-plus"></i></span>
-                      <span>Google+</span></a>
-              </li>
-          </ul>
+    <div class="inner-footer">
+      <div class="text-title">
+        <span class="text-fix">LIÊN HỆ VỚI CHÚNG TÔI</span>
       </div>
+      <div class="footer-right">
+        <ul class="social-content">
+          <li class="facebook">
+            <a class="facebook" href="#">
+              <span>
+                <i class="fab fa-facebook-f"></i>
+              </span>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li class="twitter">
+            <a class="twitter" href="#">
+              <span>
+                <i class="fab fa-twitter"></i>
+              </span>
+              <span>Twitter</span>
+            </a>
+          </li>
+          <li class="google">
+            <a class="google" href="#">
+              <span>
+                <i class="fab fa-google-plus-g"></i>
+              </span>
+              <span>Google+</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer-contact">
+          Xem Thêm Thông Tin Liên Hệ Tại
+          <a routerLink="/support">Đây</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

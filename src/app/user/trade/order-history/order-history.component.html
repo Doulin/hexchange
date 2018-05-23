@@ -1,3 +1,38 @@
-<p>
-  order-history works!
-</p>
+<div class="history-container">
+  <div class="history-content">
+    <div class="history-title">
+      <p class="coin">Loại Coin</p>
+      <p class="size">Số Lượng</p>
+      <p class="price">Giá 1 Coin</p>
+      <p class="buy-sell">Mua/Bán </p>
+      <p class="created_at">Ngày Đặt</p>
+      <p class="state">Trạng Thái </p>
+      <div class="space"></div>
+    </div>
+    <div class="history-body">
+      <ul>
+        <li class="order-history" *ngFor="let order of orderHistory">
+          <div class="coin">
+            <p class="eth" *ngIf="order.currency_id === 1"> ETH</p>
+            <p class="btc" *ngIf="order.currency_id === 3"> BTC</p>
+          </div>
+          <p class="size">   {{order.order_size}}</p>
+          <p class="price">  {{order.order_price}}</p>
+          <div class="buy-sell">
+            <p class="sell" *ngIf="order.order_side === 1"> BÁN</p>
+            <p class="buy" *ngIf="order.order_side === 0"> MUA</p>
+          </div>
+          <p class="created_at">{{order.create_at}}</p>
+          <div class="state">
+            <p class="init" *ngIf="order.order_status === 0"> INIT</p>
+            <p class="full" *ngIf="order.order_status === 1"> FULL</p>
+            <p class="partial" *ngIf="order.order_status === 2"> PARTIAL</p>
+            <p class="pending" *ngIf="order.order_status === 3"> PENDING</p>
+            <p class="cancel" *ngIf="order.order_status === 4"> CANCEL</p>
+          </div>
+          <div class="space"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

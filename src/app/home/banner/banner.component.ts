@@ -10,6 +10,7 @@ import {NgxCarousel} from 'ngx-carousel';
 export class BannerComponent implements OnInit {
   public carouselCoinItems: Array<any>;
   public carouselCoinTile: NgxCarousel;
+  isLoggedIn = false;
 
   constructor() {
     this.carouselCoinItems = [
@@ -24,6 +25,11 @@ export class BannerComponent implements OnInit {
     ];
   }
 
+  checkLogin() {
+    if (localStorage.getItem('userToken')) {
+      this.isLoggedIn = true;
+    }
+  }
   ngOnInit() {
     this.carouselCoinTile = {
       grid: {xs: 2, sm: 3, md: 4, lg: 4, all: 0},
@@ -37,6 +43,7 @@ export class BannerComponent implements OnInit {
       touch: true,
       easing: 'ease'
     };
+    this.checkLogin();
   }
 
   public carouselCoinLoad (event: any) {

@@ -12,4 +12,22 @@
     color: white;
     font-size: 14px;
     text-align: center;
+    font-weight: bold;
+}
+.buy-title {
+    color: #42A948;
+}
+.sell-title { 
+    color: #ff5722;
+}
+.order-sell-content, .order-buy-content {
+    display: flex;
+}
+.order-body {
+    flex: 1;
+}
+.order-title {
+    color: white;
+    font-size: 12px;
+    text-align: center;
 }

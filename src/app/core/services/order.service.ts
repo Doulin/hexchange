@@ -22,8 +22,12 @@ export class OrderService {
       );
   }
 
-  getAllOrder() {
-    return this._http.get('http://login-demo.local.com/api/create/order');
+  getAllOrder(): Observable<Orders[]> {
+    return this._http.get<Orders[]>('http://login-demo.local.com/api/create/order')
+    .pipe(
+      tap(listOrder => console.log(listOrder)),
+      catchError(error => of([]))
+    );
   }
 
   getOrderByUser() {
